@@ -55,22 +55,37 @@ export default function Footer() {
             Verve
           </Link>
           <p className="text-sm text-paper/60 mt-3 max-w-xs">
-            Electronics, fashion, beauty, and home, curated in one store. Fast delivery, secure checkout.
+            Electronics, fashion, beauty, and home, curated in one store. Fast
+            delivery, secure checkout.
           </p>
           <div className="flex items-center gap-4 mt-5">
-            <a href="#" aria-label="Instagram"><Camera size={17} className="text-paper/70 hover:text-paper" /></a>
-            <a href="#" aria-label="Facebook"><Share2 size={17} className="text-paper/70 hover:text-paper" /></a>
-            <a href="#" aria-label="Twitter"><MessageCircle size={17} className="text-paper/70 hover:text-paper" /></a>
+            <a href="#" aria-label="Instagram">
+              <Camera size={17} className="text-paper/70 hover:text-paper" />
+            </a>
+            <a href="#" aria-label="Facebook">
+              <Share2 size={17} className="text-paper/70 hover:text-paper" />
+            </a>
+            <a href="#" aria-label="Twitter">
+              <MessageCircle
+                size={17}
+                className="text-paper/70 hover:text-paper"
+              />
+            </a>
           </div>
         </div>
 
         {columns.map((col) => (
           <div key={col.title}>
-            <h4 className="text-xs uppercase tracking-wide text-paper/50 mb-4">{col.title}</h4>
+            <h4 className="text-xs uppercase tracking-wide text-paper/50 mb-4">
+              {col.title}
+            </h4>
             <ul className="flex flex-col gap-2.5">
               {col.links.map((link) => (
                 <li key={link.label}>
-                  <Link to={link.to} className="text-sm text-paper/80 hover:text-paper">
+                  <Link
+                    to={link.to}
+                    className="text-sm text-paper/80 hover:text-paper"
+                  >
                     {link.label}
                   </Link>
                 </li>
@@ -80,7 +95,9 @@ export default function Footer() {
         ))}
 
         <div className="col-span-2 md:col-span-1">
-          <h4 className="text-xs uppercase tracking-wide text-paper/50 mb-4">Newsletter</h4>
+          <h4 className="text-xs uppercase tracking-wide text-paper/50 mb-4">
+            Newsletter
+          </h4>
           <form onSubmit={handleSubscribe} className="flex flex-col gap-2">
             <input
               type="email"
@@ -89,7 +106,10 @@ export default function Footer() {
               onChange={(e) => setEmail(e.target.value)}
               className="bg-paper/10 border border-paper/20 px-3 py-2 text-sm outline-none focus:border-amber"
             />
-            <button type="submit" className="bg-amber text-paper text-sm py-2 font-medium">
+            <button
+              type="submit"
+              className="bg-amber text-paper text-sm py-2 font-medium"
+            >
               Subscribe
             </button>
           </form>
