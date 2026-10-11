@@ -1,3 +1,12 @@
+const galleryKeywords = [
+  "fashion,clothing",
+  "accessories,jewelry",
+  "shoes,sneakers",
+  "bags,purses",
+  "streetstyle,urban",
+  "model,outfit",
+];
+
 export default function InstagramGallery() {
   return (
     <section className="py-16 w-full">
@@ -11,15 +20,15 @@ export default function InstagramGallery() {
 
         {/* Grid Container */}
         <div className="grid grid-cols-3 md:grid-cols-6 gap-2 w-full">
-          {[...Array(6)].map((_, i) => (
+          {galleryKeywords.map((keyword, i) => (
             <a
-              key={i}
+              key={keyword}
               href="#"
               className="relative aspect-square overflow-hidden bg-gray-200 block group"
             >
               <img
-                src={`https://picsum.photos/400/400?random=${i + 1}`}
-                alt={`Customer photo ${i + 1}`}
+                src={`https://loremflickr.com/400/400/${keyword}?lock=${300 + i}`}
+                alt="E-commerce customer outfit"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 loading="lazy"
               />
