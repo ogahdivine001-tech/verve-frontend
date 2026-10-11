@@ -1,10 +1,10 @@
 const galleryKeywords = [
-  "fashion, clothing",
-  "accessories, jewelry",
-  "shoes, sneakers",
-  "bags, purses",
-  "street style, urban fashion",
-  "outdoor, lifestyle",
+  "fashion,clothing",
+  "accessories,jewelry",
+  "shoes,sneakers",
+  "bags,purses",
+  "streetstyle,urban",
+  "outdoor,lifestyle",
 ];
 
 export default function InstagramGallery() {
